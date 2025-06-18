@@ -4,6 +4,9 @@
 
 package io.ktor.http
 
+import io.ktor.http.HttpHeaders.UnsafeHeadersList
+
+
 @Suppress("unused", "KDocMissingDocumentation", "PublicApiImplicitType", "MayBeConstant")
 public object HttpHeaders {
     // Permanently registered standard HTTP headers
@@ -111,12 +114,18 @@ public object HttpHeaders {
     public val AccessControlExposeHeaders: String = "Access-Control-Expose-Headers"
     public val AccessControlMaxAge: String = "Access-Control-Max-Age"
 
+    // TDM Reservation Protocol
+    public val TDMReservation: String = "TDM-Reservation"
+    public val TDMPolicy: String = "TDM-Policy"
+
     // Unofficial de-facto headers
     public val XHttpMethodOverride: String = "X-Http-Method-Override"
     public val XForwardedHost: String = "X-Forwarded-Host"
     public val XForwardedServer: String = "X-Forwarded-Server"
     public val XForwardedProto: String = "X-Forwarded-Proto"
     public val XForwardedFor: String = "X-Forwarded-For"
+
+    public val XRobotsTag: String = "X-Robots-Tag"
 
     public val XForwardedPort: String = "X-Forwarded-Port"
 
